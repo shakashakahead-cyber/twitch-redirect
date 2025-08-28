@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Twitch Redirect</title>
+  <script>
+    // Twitchから戻ってきたURLの#フラグメントをそのまま拡張に渡す
+    const extensionId = "abcdefghijklmnopqrstuvwxyz123456"; // ←自分の拡張IDに置き換え
+    const redirectUrl = `chrome-extension://${extensionId}/oauth2` + window.location.hash;
+    window.location.replace(redirectUrl);
+  </script>
+</head>
+<body>
+  Redirecting to Chrome Extension...
+</body>
+</html>
